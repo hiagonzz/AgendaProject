@@ -1,4 +1,17 @@
-body{
-    background-color: #161616;
+.navbar-nav{
+    width: 400px;
+}
+.genda{
     color: aliceblue;
+    text-decoration: none;
+    margin-right: 20%;
+    padding-left: 15%;
+}
+.contato{
+    color: aliceblue;
+    text-decoration: none;
+}
+.imagen{
+    width: 45px;
+    margin-left: 20%;
 }
