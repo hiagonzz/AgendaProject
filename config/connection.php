@@ -1,6 +1,4 @@
-<?php 
-$BASE_URL = "http://" . $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI'] . '?') . '/';
-
+<?php  
 $host = "localhost";
 $dbname = "agenda";
 $user = "root";
