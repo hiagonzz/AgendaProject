@@ -21,13 +21,13 @@ include_once ("templates/header.php");
         <tbody>
             <?php  foreach($contacts as $contacts): ?>
                 <tr>
-                    <td scope="row"><?= $contacts["id"] ?></td>
+                    <td scope="row" class="col-id"><?= $contacts["id"] ?></td>
                     <td scope="row"><?= $contacts["name"] ?></td>
                     <td scope="row"><?= $contacts["phone"] ?></td>
                     <td class="actions">
                         <a href="#"><i class="fas fa-eye chack-icon"></i></a>
                         <a href="#"><i class="far fa-edit edit-icon"></i></a>
-                        <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                        <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                     </td>
                 </tr>
                 <?php endforeach; ?>

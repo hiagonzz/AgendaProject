@@ -1,17 +1,74 @@
-.navbar-nav{
+.navbar-nav {
     width: 400px;
 }
-.genda{
+
+.genda {
     color: aliceblue;
     text-decoration: none;
     margin-right: 20%;
     padding-left: 15%;
 }
-.contato{
+
+.contato {
     color: aliceblue;
     text-decoration: none;
 }
-.imagen{
+
+.imagen {
     width: 45px;
     margin-left: 20%;
+}
+
+#main-title {
+    text-align: center;
+    margin: 15px 0 30px;
+}
+
+#contacts-table {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contacts-table thead{
+color:aliceblue;
+background-color: #007BFF;
+}
+.col-id{
+    font-weight: bold;
+}
+.actions{
+    text-align: right;
+    width: 150px;
+}
+.actions i{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.chack-icon{
+    color: #1e7e34;
+}
+.edit-icon{
+    color: #007bff;
+}
+.delete-btn{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+}
+.delete-icon{
+    color: #bd2130;
+}
+#empty-list-text{
+    text-align:center
+}
+#msg{
+    color: #155724;
+    background-color: #D4EDDA ;
+    border: 1p solid #c3e6cb;
+    padding: 10px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px ;
 }
