@@ -28,31 +28,47 @@ if (!empty ($data)) {
             $error = $e->getMessage();
             echo "Erro:  $error";
         }
-    }else if($data["type"] === "edit"){
+    } else if ($data["type"] === "edit") {
         $name = $data["name"];
         $phone = $data["phone"];
         $observations = $data["observations"];
         $id = $data["id"];
-        
+
         $query = "UPDATE contacts 
                   SET name = :name, phone = :phone, observations = :observations 
                    WHERE id = :id";
 
-                   $stmt = $conn->prepare($query);
-                   $stmt-> bindParam(":name", $name);
-                   $stmt-> bindParam(":phone", $phone);
-                   $stmt-> bindParam(":observations", $observations);
-                   $stmt-> bindParam(":id", $id);
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":name", $name);
+        $stmt->bindParam(":phone", $phone);
+        $stmt->bindParam(":observations", $observations);
+        $stmt->bindParam(":id", $id);
 
-                   try {
+        try {
 
-                    $stmt->execute();
-                    $_SESSION["msg"] = "Contato atualizado com sucesso!";
-        
-                } catch (PDOException $e) {
-                    $error = $e->getMessage();
-                    echo "Erro:  $error";
-                }
+            $stmt->execute();
+            $_SESSION["msg"] = "Contato atualizado com sucesso!";
+
+        } catch (PDOException $e) {
+            $error = $e->getMessage();
+            echo "Erro:  $error";
+        }
+
+    } else if ($data["type"] === "delete") {
+        $id = $data["id"];
+        $query = "DELETE FROM contacts WHERE id =:id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+
+
+        try {
+            $stmt->execute();
+            $_SESSION["msg"] = "Contato removido com sucesso!";
+
+        } catch (PDOException $e) {
+            $error = $e->getMessage();
+            echo "Erro:  $error";
+        }
 
     }
     header("Location:" . $BASE_URL . "../index.php");

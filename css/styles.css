@@ -55,6 +55,9 @@
 .edit-icon {
     color: #007bff;
 }
+.delete-form{
+    display: inline-block;
+}
 
 .delete-btn {
     background-color: transparent;
